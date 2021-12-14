@@ -2,18 +2,19 @@
   margin: 0;
   padding: 0;
   font-family: "Outfit", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
   background-color: hsl(217, 54%, 11%);
 }
 
-div{
-    padding: 0;
+div {
+  padding: 0;
 }
 
 .container {
-    width: 100%;
+  width: 100%;
 }
 
 .card {
@@ -25,97 +26,155 @@ div{
   margin-top: 150px;
   padding: 25px;
   background-color: hsl(216, 50%, 16%);
-  box-sizing: border-box;
   margin-bottom: 100px;
+  display: block;
 }
 
-.card #equilibrium-img {
-  width: 300px;
-  border-radius: 5px;
-  margin: auto;
+.image{
+    position: relative;
+    width: 300px;
+    
+
 }
 
-h2{
-    font-size: 21px;
-    font-weight: bold;
-    color: hsl(0, 0%, 100%);
-    margin-top: 18px;
+.image-equi{
+   display: block;
+   width: 100%; 
+   border-radius: 5px;
 }
 
-p{
-    font-size: 18px;
-    color: hsl(216, 54%, 80%);
-    margin-top: 18px;
-}
-
-.eth-time{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    box-sizing: border-box;
-    margin-bottom: 23px;
-}
-
-.eth-left{
+.img-overlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 255, 248, 0.5);
     display: flex;
-    flex-direction: right;
-    box-sizing: border-box;
-    margin-top: 28px;
-}
-
-.time-left{
-    display: flex;
-    flex-direction: right;
-    box-sizing: border-box;
-    margin-top: 28px;
-    justify-content: right;
-}
-
-.eth-left img{
-    margin-right: 5px;
-}
-
-#eth{
-    font-size: bold;
-    color: hsl(178, 100%, 50%);
-    font-size: 18px;
-}
-
-.time-left img{
-    margin-right: 5px;
-}
-
-#time{
-    font-size: 400;
-    color: hsl(216, 54%, 80%);
-    font-size: 18px;
-}
-
-
-.avatar-name{
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    margin-top: 17.5px;
     align-items: center;
+    justify-content: center;
+    opacity: 0;
 }
 
-.avatar img{
-    width: 35px;
-    border: 1px white solid;
-    border-radius: 50%;
+.hover-icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.name #avatar-name{
-    color: hsl(216, 54%, 80%);   
-    font-size: 18px;
-    font-weight: 300;
+.img-overlay:hover{
+    opacity: 1;
+    border-radius: 5px;
+    cursor: grab;
+    transition: 0.3s ease-in;
 }
 
-.name #avatar-name span{
-    color: #fff;
-    font-weight: 600;
+/* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 255, 248, 50);
+    display: flex;
+    align-items: center;
+    justify-content: center; */
+
+h2 {
+  font-size: 21px;
+  font-weight: bold;
+  color: hsl(0, 0%, 100%);
+  margin-top: 18px;
 }
 
-.attribution{
-    color: white;
-    font-size: 12px;
+h2:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: grab;
+}
+
+p {
+  font-size: 18px;
+  color: hsl(216, 54%, 80%);
+  margin-top: 18px;
+}
+
+.eth-time {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 23px;
+}
+
+.eth-left {
+  display: flex;
+  flex-direction: right;
+  margin-top: 28px;
+}
+
+.time-left {
+  display: flex;
+  flex-direction: right;
+  margin-top: 28px;
+  justify-content: right;
+}
+
+.eth-left img {
+  margin-right: 5px;
+}
+
+#eth {
+  font-size: bold;
+  color: hsl(178, 100%, 50%);
+  font-size: 18px;
+}
+
+.time-left img {
+  margin-right: 5px;
+}
+
+#time {
+  font-size: 400;
+  color: hsl(216, 54%, 80%);
+  font-size: 18px;
+}
+
+.avatar-name {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  margin-top: 17.5px;
+  align-items: center;
+}
+
+.avatar img {
+  width: 35px;
+  border: 1px white solid;
+  border-radius: 50%;
+}
+
+.name #avatar-name {
+  color: hsl(216, 54%, 80%);
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.name #avatar-name span {
+  color: #fff;
+  font-weight: 600;
+}
+
+.name #avatar-name span:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: grab;
+}
+
+.attribution {
+  color: white;
+  font-size: 12px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
