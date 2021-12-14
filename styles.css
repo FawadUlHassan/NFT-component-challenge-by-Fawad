@@ -30,48 +30,48 @@ div {
   display: block;
 }
 
-.image{
-    position: relative;
-    width: 300px;
-    
-
+.image {
+  position: relative;
+  width: 300px;
+  margin: auto;
+  
 }
 
-.image-equi{
-   display: block;
-   width: 100%; 
-   border-radius: 5px;
+.image-equi {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
 }
 
-.img-overlay{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    transform: translate(-50%, -50%);
-    background: rgba(0, 255, 248, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
+.img-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 255, 248, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
 }
 
-.hover-icon{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.hover-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.img-overlay:hover{
-    opacity: 1;
-    border-radius: 5px;
-    cursor: grab;
-    transition: 0.3s ease-in;
+.img-overlay:hover {
+  opacity: 1;
+  border-radius: 5px;
+  cursor: grab;
+  transition: 0.3s ease-in;
 }
 
 /* position: absolute;
@@ -177,4 +177,20 @@ p {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    border-radius: 10px;
+    margin-top: 50px;
+    width: 300px;
+    height: 550px;
+    padding: 20px;
+  }
+
+  .image {
+    width: 260px;
+  }
+
+
 }
